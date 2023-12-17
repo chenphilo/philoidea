@@ -49,7 +49,7 @@ describe an agent as **at least as confident** of one proposition as another, **
 
 ``more confident than`` relations:
 
-- ![Aconfidenceranking](Aconfidenceranking.png)
+- ![Aconfidenceranking](./Aconfidenceranking.png)
 
 **Comparative Entailment**: If an agent believes A entails B then rationality requires an agent to be confident of B $\geq$ A.
 
