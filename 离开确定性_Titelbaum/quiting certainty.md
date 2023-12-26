@@ -31,7 +31,9 @@ These constraints help CLF model two types of certainty-loss stories:
 - stories involving context-sensitive claims -- (GC) and (PEP)
 
 traditional Bayesian updating rule - Conditionalization: For any $t_j,t_k \in T$ with $j\leq k$ and any $x \in L$, 
+
 $$P_k(x) = P_j(x | \langle C_k − C_j\rangle)$$
+
 - $L$ is a set of sentences representing claims to which the agent might assign degrees of belief
 - $P_j$ and $P_k$ are credence functions representing the agent's degrees of belief at $t_j$ and $t_k$ respectively
 - $C_k - C_j$ is a set consisting of every sentence in $C_k$ but not $C_j$
@@ -63,15 +65,21 @@ $$P_2(h) = P0(h | T) = P_0(h)$$
 
 Since $C_0 \subseteq C_1$,
 $$P_1(y) = P_0(y | \langle C_1 - C_0\rangle)$$
+
 by Ratio Formula (满足 $P_0(\neg C_1 - C_0) < 1$):
-$$P_1(y) = \frac{P_0(y \& \langle C_1 - C_0\rangle)}{P_0(\langle C_1 - C_0\rangle)}$$
+$$P_1(y) = \frac{P_0(y \wedge \langle C_1 - C_0\rangle)}{P_0(\langle C_1 - C_0\rangle)}$$
+
 by $P_2(y) = P_0(y)$:
-$$P_1(y) = \frac{P_2(y \& \langle C_1 - C_0\rangle)}{P_2(\langle C_1 - C_0\rangle)}$$
+$$P_1(y) = \frac{P_2(y \wedge \langle C_1 - C_0\rangle)}{P_2(\langle C_1 - C_0\rangle)}$$
+
 by $\langle C_1 - C_0\rangle \Leftrightarrow \langle C_1 - C_2\rangle$:
-$$P_1(y) = \frac{P_2(y \& \langle C_1 - C_2\rangle)}{P_2(\langle C_1 - C_2\rangle)}$$
+$$P_1(y) = \frac{P_2(y \wedge \langle C_1 - C_2\rangle)}{P_2(\langle C_1 - C_2\rangle)}$$
+
 by Ratio Formula:
 $$P_1(y) = P_2(y | \langle C_1 - C_2\rangle)$$
+
 $$P_2(y | \langle C_1 - C_2\rangle) = P_0(y | \langle C_1 - C_0\rangle)$$
+
 your unconditional degrees of belief at the earlier time equal your degrees of belief at the later time conditional on the certainties lost in-between. 
 > “inverse temporal credal conditionalization” at (Levi, 1980, Section 4.3)
 
