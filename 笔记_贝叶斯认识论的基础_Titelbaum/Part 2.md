@@ -13,7 +13,7 @@ A **contingent proposition** is neither a contradiction nor a tautology.
 
 ### Ratio Formula
 For any $P$ and $Q$ in $\mathfrak{L}$, if $cr(Q)>0$ then:
-$$cr(P|Q) = \frac{cr(P\& Q)}{cr(Q)}$$
+$$cr(P|Q) = \frac{cr(P\wedge Q)}{cr(Q)}$$
 
 ### Bayes’s Theorem
 For any $H$ and $E$ in $\mathfrak{L}$,
