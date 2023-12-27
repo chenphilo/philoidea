@@ -59,7 +59,7 @@ $$P_2(h) = P0(h | T) = P_0(h)$$
 
 **reset** to precisely what it was before you began your trip. 
 
-> 可能有人提出反对意见，即（LC）对于 Shangri La 的“解决方案”基于对模型 SL（Shangri La）的外系统约束内建的假设，即你在 t2 时对正面的确信度应该不足，但这正是一个良好的更新方案应该告诉我们的内容。我已经明确表示，我并不打算让 CLF 告诉我们关于一个代理人信念状态在两个时间点之间如何演变的一切 —— CLF 接受有关代理人确信度及其要求的规定作为输入，然后产生关于代理人不太确定的信念度具体值的结论作为输出。正如我在第 3.3 节中讨论的那样，我们不需要像贝叶斯建模框架那样复杂的机制来确定代理人在特定时间点上应该确信的事情。例如，Arntzenius 可以提出论点，一旦你到达 Shangri La，你就不应该信任你的记忆，因此在他应用任何贝叶斯机制之前，你就不应该确信硬币是正面朝上的。CLF 的输入是你在 t2 时对正面不应该完全确信的事实，并输出的是这种非极端确信度应该恰好为 1/2。
+> 可能有人提出反对意见，即（LC）对于 Shangri La 的“解决方案”基于对模型 SL（Shangri La）的外系统约束建立的假设，即你在 t2 时对正面的确信度应该不足，但这正是一个良好的更新方案应该告诉我们的内容。我已经明确表示，我并不打算让 CLF 告诉我们关于一个代理人信念状态在两个时间点之间如何演变的一切 —— CLF 接受有关代理人确信度及其要求的规定作为输入，然后产生关于代理人不太确定的信念度具体值的结论作为输出。正如我在第 3.3 节中讨论的那样，我们不需要像贝叶斯建模框架那样复杂的机制来确定代理人在特定时间点上应该确信的事情。例如，Arntzenius 可以提出论点，一旦你到达 Shangri La，你就不应该信任你的记忆，因此在他应用任何贝叶斯机制之前，你就不应该确信硬币是正面朝上的。CLF 的输入是你在 t2 时对正面不应该完全确信的事实，并输出的是这种非极端确信度应该恰好为 1/2。
 
 **reverse-temporal conditionalization**:
 
@@ -85,7 +85,7 @@ your unconditional degrees of belief at the earlier time equal your degrees of b
 
 But imagine we have a story with only two times, between which a pure information-loss event occurs. There will be no $t_j$ and $t_k ( j < k)$ available such that $C_j \subseteq C_k$, so the (LC)-based framework will be unable to yield any diachronic verdicts for this story. 
 
-Generalized Conditionalization (GC): For any $t_j,t_k \in T$ with $j\leq k$ and any $x \in L$, if $P_j(\neg \langle C_k − C_j\rangle) < 1$ and $P_k(\neg \langle C_j − C_k\rangle) < 1$, then
+**Generalized Conditionalization (GC)**: For any $t_j,t_k \in T$ with $j\leq k$ and any $x \in L$, if $P_j(\neg \langle C_k − C_j\rangle) < 1$ and $P_k(\neg \langle C_j − C_k\rangle) < 1$, then
 $$P_j(x | \langle C_k − C_j\rangle) = P_j(x | \langle C_j − C_k\rangle)$$
 
 >前提条件是根据句子的无条件置信度小于1来制定的，以便与CLF版本的Ratio Formula中的前提条件相匹配，并且(GC)可以在推导中使用。为了在推导的一行中引入(GC)的一个实例，我们首先确定哪些句子属于$C_k - C_j$和$C_j - C_k$，然后确定$P_j(\neg \langle C_k − C_j\rangle)$和 $P_k(\neg \langle C_j − C_k\rangle)$是否都小于1。
@@ -147,24 +147,43 @@ If $M$ is a proper expansion of $M^-$ we will call model $M^-$ a **proper reduct
 
 ![Table-9-3](./Table-9-3.png)
 
-$$P_2(h) > P_1(h)$$
-
+by (GC):
+$$P_2(h) = P_2(h | T) = P_1(h | m)$$
+by Ratio Formula:
+$$P_2(h) = \frac{P_1(h \wedge m) }{P_1(m)}$$
+Finite Additivity:
+$$P_1(h) = P_1(h \wedge m) + P_1(h \wedge \neg m)$$
+By the extrasystematic constraints $P_1(h \rightarrow m) = 1$:
+$$P_1(h) = P_1(h \wedge m)$$
+$$P_2(h) = \frac{P_1(h) }{P_1(m)}$$
+$$P_2(h) = \frac{P_1(h) }{P_1(m\wedge h)+P_1(m\wedge \neg h)}$$
+$$P_2(h) = \frac{P_1(h) }{P_1(h)+P_1(m|\neg h)\cdot (1-P_1(h))}$$
+---
+$$P_2(h) > \frac{P_1(h) }{P_1(h)+1 \cdot (1-P_1(h))} = P_1(h)$$
+---
 ![Table-9-4](./Table-9-4.png)
 
 ![Table-9-5](./Table-9-5.png)
 
-$$P_2(h) = P_0(h)$$
+Beauty does at each time in the model's time set have a context-insensitive expression that she is certain uniquely picks out the denotation of “today : “Sunday” at t0 and “Monday” at t1. So the context-insensitive reduction of S02 will also be a proper reduction.
 
+apply (GC) to model $S02^−$:
+$$P_2^-(h|T) = P_0^-(h|T)$$
+$$P_2^-(h) = P_0^-(h)$$
+$S02$ is a proper expansion of $S02^−$: $P_0(s \equiv T) = 1, P_2(s \equiv F) = 1, P_0(m \equiv F) = 1, P_2(m \equiv T) = 1$
+
+by (PEP):
+$$P_2(h) = P_0(h)$$
 SUM: 
 $$P_0(h) > P_1(h)$$
 
 using CLF’s systematic constraints; neither the Principal Principle nor any indifference principle was required. This is sufficient to refute the “halfer” position on the Sleeping Beauty Problem.
 
 Objection:
-> Nick Bostrom (2007): Between t1 and t2 Beauty becomes certain not only of the claim “Today is Monday, ” but also of the claim “I have been told today that today is Monday. ” Bostrom argues that Beauty’s Monday night degree of belief in heads is required to equal her Monday morning degree of belief in heads conditional on both these claims, and there is no reason to think that this conditional degree of belief should be greater than Beauty’s unconditional Monday morning degree of belief in heads. So we cannot rely on Equation(9.6)’s conclusion that P2(h) > P1(h).
+> Nick Bostrom (2007): Between t1 and t2 Beauty becomes certain not only of the claim “Today is Monday, ” but also of the claim “I have been told today that today is Monday. ” Bostrom argues that Beauty’s Monday night degree of belief in heads is required to equal her Monday morning degree of belief in heads conditional on both these claims, and there is no reason to think that this conditional degree of belief should be greater than Beauty’s unconditional Monday morning degree of belief in heads. So we cannot rely on conclusion that P2(h) > P1(h).
 
 Answer:
-> 类似于Table-8-4，By (PEP)可以证明复合命题不影响结论。
+> 类似于 Table-8-4，By (PEP)可以证明复合命题不影响结论。
 
 Objection:
 > ignores the role of memory loss
@@ -177,6 +196,30 @@ Answer:
 > Everything is exactly as in the original Sleeping Beauty Problem, with one addition: Beauty has a friend on the experimental team, and before she falls asleep Sunday night he agrees to do her a favor. While the other experimenters flip their fateful coin, Beauty’s friend will go into another room and roll a fair die. (The outcome of the die roll is independent of the outcome of the coin flip. ) If the die roll comes out odd, Beauty’s friend will place a piece of red paper where Beauty is sure to see it when she awakens Monday morning, then replace it Tuesday morning with a blue paper she is sure to see if she awakens on Tuesday. If the die roll comes out even, the process will be the same, but Beauty will see the blue paper on Monday and the red paper if she awakens on Tuesday
 
 ![Table-9-7](./Table-9-7.png)
+
+![Table-9-8](./Table-9-8.png)
+
+by (GC):
+$$P_1^- (h | T) = P_0^-(h | ar \wedge (h \rightarrow mr) )$$
+
+$TB^-$ is $TB$'s context-insensitive reduction. $TB$ is a proper expansion of $TB^-$: $P_0(s \equiv T) = 1, P_1(s \equiv F) = 1, P_0(m \equiv F) = 1, P_2(m \equiv mr) = 1$
+
+by (PEP):
+$$P_1 (h | T) = P_0(h | ar \wedge (h \rightarrow mr) )$$
+$$P_1 (h | T) = \frac{P_0(mr | h)\cdot P_0(h)}{P_0(mr | h)\cdot P_0(h) + 1 - P_0(h)}$$
+
+> expresses Beauty’s Monday morning degree of belief in heads in terms of two values: her Sunday night degree of belief that the coin will come up heads, and her Sunday night degree of belief that the die roll will come out odd conditional on the coin’s coming up heads.
+
+Principal Principle yields $P_0(h)=1/2$ and $P_0(mr|h)=1/2$. If we add these as extrasystematic constraints on model $TB$:
+$$P_1(h)=\frac{1}{3}$$
+
+objection:
+> Beauty’s required t1 degree of belief in heads in Technicolor Beauty does not match her required t1 degree of belief in heads in the Sleeping Beauty Problem.
+
+answer: four-step argument
+> ^
+
+
 
 ## 10. Alternative updating schemes
 
