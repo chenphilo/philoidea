@@ -1,19 +1,16 @@
 <!-- TOC -->
 
-- [Certainty-Loss Framework (CLF)](#certainty-loss-framework-clf)
-  - [summary： Certainty-Loss Framework (CLF) vs Bayesians](#summary-certainty-loss-framework-clf-vs-bayesians)
-  - [2. Models and norms](#2-models-and-norms)
-  - [3. The modeling framework and what models represent](#3-the-modeling-framework-and-what-models-represent)
-  - [6. Generalized Conditionalization](#6-generalized-conditionalization)
-  - [7. Suppositional consistency](#7-suppositional-consistency)
-  - [8. The Proper Expansion Principle](#8-the-proper-expansion-principle)
-  - [9. Applying (PEP)](#9-applying-pep)
-      - [9.2.5 Modeling strategies](#925-modeling-strategies)
-    - [9.3 Technicolor Beauty](#93-technicolor-beauty)
-  - [10. Alternative updating schemes](#10-alternative-updating-schemes)
-
-<!-- /TOC -->
-<!-- /TOC -->
+- [Certainty-Loss Framework CLF](#certainty-loss-framework-clf)
+    - [summary： Certainty-Loss Framework CLF vs Bayesians](#summary-certainty-loss-framework-clf-vs-bayesians)
+    - [Models and norms](#models-and-norms)
+    - [The modeling framework and what models represent](#the-modeling-framework-and-what-models-represent)
+    - [Generalized Conditionalization](#generalized-conditionalization)
+    - [Suppositional consistency](#suppositional-consistency)
+    - [The Proper Expansion Principle](#the-proper-expansion-principle)
+    - [Applying PEP](#applying-pep)
+            - [Modeling strategies](#modeling-strategies)
+        - [Technicolor Beauty](#technicolor-beauty)
+    - [Alternative updating schemes](#alternative-updating-schemes)
 
 <!-- /TOC -->
 
@@ -22,7 +19,7 @@
 ## summary： Certainty-Loss Framework (CLF) vs Bayesians
 
 **common systematic constraints**
-Subjective Finite Additivity and the Ratio Formula along with the Conditionalization updating rule
+[Subjective Finite Additivity](主观有限可加性) and the [Ratio Formula](比率公式) along with the [Conditionalization updating rule](条件化更新规则)
 
 **different systematic constraints**
 
@@ -37,6 +34,7 @@ Proper Expansion Principle (PEP) to solve context-insensitive claims.
 - 什么是一个模型？
 we can think of a formal model as a collection of symbols, strings of symbols, and sets or series of those strings and symbols organized in some fashion.
 - 桥梁原则：连接形式模型与被建模对象的原则称为“桥梁原则”（最早由MacFarlane提出，这里被更一般意义上使用）
+  > In What Sense (If Any) Is Logic Normative for Thought? 
 
 ![Figure-2-1](Figure-2-1.png)
 
@@ -67,11 +65,13 @@ CLF 直接是规范性要求的模型，而不关心概率的概念讨论
 ## 3. The modeling framework and what models represent
 The goal of a CLF model is to determine what requirements an agent's changing set of certainties places on her degrees of belief in claims of which she is less-than-certain.
 
-Changes in confidence over time are exactly the sort of thing CLF models were designed to represent
+Changes in confidence over time are exactly the sort of thing [CLF models]() were designed to represent
 
 - a time set
 - a modeling language
-- a set of extrasystematic constraints
+- a set of [extrasystematic constraints](系统外约束)
+  - 简单来说就是对确定性Certainty的解释，如果确定或能被确定的推出，则 $P_1(x) = 1$
+  - 如果非确定，则 $P_1(x) < 1$
 
 
 ## 6. Generalized Conditionalization
@@ -90,7 +90,7 @@ $$P_k(x) = P_j(x | \langle C_k − C_j\rangle)$$
 - $L$ is a set of sentences representing claims to which the agent might assign degrees of belief
 - $P_j$ and $P_k$ are credence functions representing the agent's degrees of belief at $t_j$ and $t_k$ respectively
 - $C_k - C_j$ is a set consisting of every sentence in $C_k$ but not $C_j$
-- The angle-bracket notation gives us a proxy sentence for $C_k - C_j$ that is logically equivalent to the conjunction of all the sentences in that set; **if the set is empty, the angle-brackets yield a tautology**
+- The angle-bracket notation gives us a proxy sentence for $C_k - C_j$ that is logically equivalent to the conjunction of all the sentences in that set; **if the set is empty, the angle-brackets yield a tautology T**
 
 counter example:
 - Spaghetti - Talbott (1991)
@@ -108,7 +108,7 @@ Conditionalization-based model will indicate that her doxastic evolution violate
 $$P_k(x) = P_j(x | \langle C_k − C_j\rangle)$$
 
 it's a **defensive move**, preventing our models from making certain mistakes—from yielding incorrect verdicts relating credences at two times. But, since $C_0 \subseteq C_2$, (LC)-based version of SL will yield:
-$$P_2(h) = P0(h | T) = P_0(h)$$
+$$P_2(h) = P_0(h | T) = P_0(h)$$
 
 **reset** to precisely what it was before you began your trip. 
 
@@ -119,7 +119,7 @@ $$P_2(h) = P0(h | T) = P_0(h)$$
 Since $C_0 \subseteq C_1$,
 $$P_1(y) = P_0(y | \langle C_1 - C_0\rangle)$$
 
-by Ratio Formula (满足 $P_0(\neg C_1 - C_0) < 1$):
+by Ratio Formula ( 满足 $P_0(\neg (C_1 - C_0)$ ，？也就是要求 $P_0(C_1 - C_0)>0$ 对吧 ):
 $$P_1(y) = \frac{P_0(y \wedge \langle C_1 - C_0\rangle)}{P_0(\langle C_1 - C_0\rangle)}$$
 
 by $P_2(y) = P_0(y)$:
@@ -171,7 +171,9 @@ $$(\forall y \in L)(\exists x \in L^- )(\forall t_i \in T)(P_i(x \equiv y) = 1)$
 
 **Theorem E.3**: If M is a perfect expansion of model $M^-$, the analogue of any verdict of $M^-$ is a verdict of $M$.
 
-例子：
+例子：The Die: Marilynn walks into a room. She is told that a few minutes ago a fair die was thrown, and in a few minutes a loudspeaker will announce whether the outcome was odd or even. A few minutes later, the loudspeaker announces that the die came up odd. Marilynn believes this, along with everything she was told earlier, with certainty.
+
+![Table-3-1](./Table-3-1.png)
 
 ![Table-8-4](./Table-8-4.png)
 
@@ -191,6 +193,8 @@ $$(\forall y \in L)(\forall t_i \in T)(\exists x \in L^- )(P_i(x \equiv y) = 1)$
 If $M$ is a proper expansion of $M^-$ we will call model $M^-$ a **proper reduction** of model $M$.
 
 **Proper Expansion Principle (PEP)**: If model $M$ is a proper expansion of its context-insensitive reduction $M^-$, the analogue of any verdict of $M^-$ is a verdict of $M$.
+
+Sleeping In: After a long, stormy night translating Slavic poetry, Olga finally passes out from exhaustion. She awakens to find that her clock reset at some point during the night and is now blinking“6am. ”She goes back to sleep, and when she awakens again the clock reads“3pm. ”On her second awakening, how should Olga’s degree of belief that it is now afternoon relate to the degrees of belief she assigned on her first awakening
 
 ![Table-8-1](./Table-8-1.png)
 
@@ -282,10 +286,15 @@ Add a different feature to the original Sleeping Beauty Problem: The trick will 
 
 ![Table-9-8](./Table-9-8.png)
 
+ar在t=0和t=1时的涵义有点模糊，所以这里的ar应该是，在这个实验中，我会或者已经在某个red paper day醒来。t=1时比t=0时首先多了个ar的知识，还多了个h->mr，但后者是可以根据h>(ar=mr)推出的，需要写出来吗？
+
 by (GC):
+
+$$P_1^- (h | \langle C_0 - C_1\rangle) = P_0^-(h | \langle C_1 - C_0\rangle)$$
+
 $$P_1^- (h | T) = P_0^-(h | ar \wedge (h \rightarrow mr) )$$
 
-$TB^-$ is $TB$'s context-insensitive reduction. $TB$ is a proper expansion of $TB^-$: $P_0(s \equiv T) = 1, P_1(s \equiv F) = 1, P_0(m \equiv F) = 1, P_2(m \equiv mr) = 1$
+$TB^-$ is $TB$'s context-insensitive reduction. $TB$ is a proper expansion of $TB^-$: $P_0(s \equiv T) = 1, P_1(s \equiv F) = 1, P_0(m \equiv F) = 1, P_2(m \equiv mr) = 1$ 
 
 by (PEP):
 $$P_1 (h | T) = P_0(h | ar \wedge (h \rightarrow mr) ) = P_0(h | ar)$$
@@ -293,6 +302,9 @@ by constraints:
 $$P_0(\neg h) = P_0(\neg h \wedge ar)$$
 by Ratio Formula:
 $$P_1(h) = \frac{P_0(h \wedge ar)}{P_0(ar)} = \frac{P_0(h \wedge ar)}{P_0(h \wedge ar) + P_0(\neg h \wedge ar)}$$
+
+利用h->(mr<->ar)，$P_0(h\wedge ar)=P_0(h\wedge mr)$
+
 $$P_1 (h) = \frac{P_0(mr | h)\cdot P_0(h)}{P_0(mr | h)\cdot P_0(h) + 1 - P_0(h)}$$
 
 > expresses Beauty’s Monday morning degree of belief in heads in terms of two values: her Sunday night degree of belief that the coin will come up heads, and her Sunday night degree of belief that the die roll will come out odd conditional on the coin’s coming up heads.

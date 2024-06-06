@@ -24,7 +24,7 @@ different emphasis:
 - Bayesian epistemologists: place much more emphasis on **quantitative attitudes** such as credences.
 
 ### Binary beliefs
-Shortcomings ofbinary belief:
+Shortcomings of binary belief:
 - no difference between doxastic attitudes toward two propositions: nuclear fusion is a viable energy source;  car will stop when she presses the brake pedal
 - change
 - beliefs as evidence responsive representations of the world and without considering those beliefs' consequences for her actions.
@@ -81,7 +81,7 @@ there are many Bayesian epistemologies. Every view I would call a Bayesian epist
 
  - **contemporary Bayesians**
 
-numerical value of a credence not as part of the **content** toward which the agent adopts the attitude, but instead as an **attribute of the attitude itself**. **信念的数值不是主体采取态度的内容的一部分，而是该态度本身的属性。**
+    numerical value of a credence not as part of the **content** toward which the agent adopts the attitude, but instead as an **attribute of the attitude itself**. **信念的数值不是主体采取态度的内容的一部分，而是该态度本身的属性。**
 
 ### 本书内容：
 

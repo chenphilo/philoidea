@@ -32,7 +32,7 @@ For any time $t_i$ and later time $t_j$, if proposition $E$ in $\mathfrak{L}$ re
 $$cr_{j}(H) = cr_{i}(H|E)$$
 
 作者使用的概念区分：
-- **conditional credence**: a genuine mental state, manifested by the agent in various ways at $t_i$ (what she’ll say in conversation, what sorts ofbets she'll accept, etc.) beyond just her dispositions to update.
+- **conditional credence**: a genuine mental state, manifested by the agent in various ways at $t_i$ (what she’ll say in conversation, what sorts of bets she'll accept, etc.) beyond just her dispositions to update.
 - **Conditionalization**: a **normative constraint relating** the agent's unconditional credences at a later time to her conditional credences earlier on.
 
 ### Evidence and certainty
