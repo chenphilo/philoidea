@@ -37,7 +37,7 @@ Rationality:
 
 Counterexamples to Consistency and Closure:
 - **Lottery Paradox** by Kyburg (1961)
-    > A fair lottery has sold one million tickets. Because ofthe poor odds, an agent who has purchased a ticket believes her ticket will not win. She also believes, of each other ticket purchased in the lottery, that it will not win. Nevertheless, she believes that at least one purchased ticket will win.
+    > A fair lottery has sold one million tickets. Because of the poor odds, an agent who has purchased a ticket believes her ticket will not win. She also believes, of each other ticket purchased in the lottery, that it will not win. Nevertheless, she believes that at least one purchased ticket will win.
     - resolve: it is irrational for the agent in the Lottery to believe her ticket will lose. 
 - **Preface Paradox** Makinson (1965)
     > You write a long nonfiction book with many claims in its main text, each of which you believe. In the acknowledgments at the beginning of the book you write, "While I am indebted to those listed here for their invaluable help, I am sure there remain errors in the main text, for which I take sole responsibility."

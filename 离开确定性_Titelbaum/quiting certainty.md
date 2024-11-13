@@ -1,16 +1,16 @@
 <!-- TOC -->
 
-- [Certainty-Loss Framework CLF](#certainty-loss-framework-clf)
-    - [summary： Certainty-Loss Framework CLF vs Bayesians](#summary-certainty-loss-framework-clf-vs-bayesians)
-    - [Models and norms](#models-and-norms)
-    - [The modeling framework and what models represent](#the-modeling-framework-and-what-models-represent)
-    - [Generalized Conditionalization](#generalized-conditionalization)
-    - [Suppositional consistency](#suppositional-consistency)
-    - [The Proper Expansion Principle](#the-proper-expansion-principle)
-    - [Applying PEP](#applying-pep)
-            - [Modeling strategies](#modeling-strategies)
-        - [Technicolor Beauty](#technicolor-beauty)
-    - [Alternative updating schemes](#alternative-updating-schemes)
+- [Certainty-Loss Framework (CLF)](#certainty-loss-framework-clf)
+  - [summary： Certainty-Loss Framework (CLF) vs Bayesians](#summary-certainty-loss-framework-clf-vs-bayesians)
+  - [2. Models and norms](#2-models-and-norms)
+  - [3. The modeling framework and what models represent](#3-the-modeling-framework-and-what-models-represent)
+  - [6. Generalized Conditionalization](#6-generalized-conditionalization)
+  - [7. Suppositional consistency](#7-suppositional-consistency)
+  - [8. The Proper Expansion Principle](#8-the-proper-expansion-principle)
+  - [9. Applying (PEP)](#9-applying-pep)
+      - [9.2.5 Modeling strategies](#925-modeling-strategies)
+    - [9.3 Technicolor Beauty](#93-technicolor-beauty)
+  - [10. Alternative updating schemes](#10-alternative-updating-schemes)
 
 <!-- /TOC -->
 
@@ -119,7 +119,7 @@ $$P_2(h) = P_0(h | T) = P_0(h)$$
 Since $C_0 \subseteq C_1$,
 $$P_1(y) = P_0(y | \langle C_1 - C_0\rangle)$$
 
-by Ratio Formula ( 满足 $P_0(\neg (C_1 - C_0)$ ，？也就是要求 $P_0(C_1 - C_0)>0$ 对吧 ):
+by Ratio Formula ( 满足 $P_0(\neg (C_1 - C_0))$ ，？也就是要求 $P_0(C_1 - C_0)>0$ 对吧 ):
 $$P_1(y) = \frac{P_0(y \wedge \langle C_1 - C_0\rangle)}{P_0(\langle C_1 - C_0\rangle)}$$
 
 by $P_2(y) = P_0(y)$:
@@ -139,7 +139,7 @@ your unconditional degrees of belief at the earlier time equal your degrees of b
 But imagine we have a story with only two times, between which a pure information-loss event occurs. There will be no $t_j$ and $t_k ( j < k)$ available such that $C_j \subseteq C_k$, so the (LC)-based framework will be unable to yield any diachronic verdicts for this story. 
 
 **Generalized Conditionalization (GC)**: For any $t_j,t_k \in T$ with $j\leq k$ and any $x \in L$, if $P_j(\neg \langle C_k − C_j\rangle) < 1$ and $P_k(\neg \langle C_j − C_k\rangle) < 1$, then
-$$P_j(x | \langle C_k − C_j\rangle) = P_j(x | \langle C_j − C_k\rangle)$$
+$$P_j(x | \langle C_k − C_j\rangle) = P_k(x | \langle C_j − C_k\rangle)$$
 
 >前提条件是根据句子的无条件置信度小于1来制定的，以便与CLF版本的Ratio Formula中的前提条件相匹配，并且(GC)可以在推导中使用。为了在推导的一行中引入(GC)的一个实例，我们首先确定哪些句子属于$C_k - C_j$和$C_j - C_k$，然后确定$P_j(\neg \langle C_k − C_j\rangle)$和 $P_k(\neg \langle C_j − C_k\rangle)$是否都小于1。
 
@@ -286,7 +286,7 @@ Add a different feature to the original Sleeping Beauty Problem: The trick will 
 
 ![Table-9-8](./Table-9-8.png)
 
-ar在t=0和t=1时的涵义有点模糊，所以这里的ar应该是，在这个实验中，我会或者已经在某个red paper day醒来。t=1时比t=0时首先多了个ar的知识，还多了个h->mr，但后者是可以根据h>(ar=mr)推出的，需要写出来吗？
+- ?: ar在t=0和t=1时的涵义有点模糊，因为i awaken并没有表明是哪一次醒来。所以这里的ar应该是“在这个实验中，我会或者已经在某个red paper day醒来”这种复合说法。t=1时比t=0时首先多了个ar的知识，还多了个h->mr，但后者是可以根据h>(ar=mr)推出的。
 
 by (GC):
 
