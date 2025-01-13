@@ -11,8 +11,15 @@
       - [9.2.5 Modeling strategies](#925-modeling-strategies)
     - [9.3 Technicolor Beauty](#93-technicolor-beauty)
   - [10. Alternative updating schemes](#10-alternative-updating-schemes)
+  - [11. Indifference principles and quantum mechanics](#11-indifference-principles-and-quantum-mechanics)
+    - [11.1 The Indifference Principle](#111-the-indifference-principle)
+      - [11.1.2 CLF and Duplication](#1112-clf-and-duplication)
+      - [11.1.4 Weatherson’s objections](#1114-weathersons-objections)
+    - [11.2 Fission and cloning](#112-fission-and-cloning)
+    - [11.3 Quantum mechanics](#113-quantum-mechanics)
 
 <!-- /TOC -->
+
 
 # Certainty-Loss Framework (CLF)
 
@@ -46,14 +53,14 @@ we can think of a formal model as a collection of symbols, strings of symbols, a
 一些桥梁原则的例子：
 
 Harman (1986) does an excellent job of drawing our attention to pernicious assumptions about the bridge principle between **logical consequence** and **norms for reasoning**. 
-> “At this point, Mary’s beliefs are jointly inconsistent and therefore imply any proposition whatsoever. This does not authorize Mary to infer any proposition whatsoever” (1986)
+> “At this point, Mary's beliefs are jointly inconsistent and therefore imply any proposition whatsoever. This does not authorize Mary to infer any proposition whatsoever” (1986)
 
 Carnap:
 >  if an evidence sentence e confirms a hypothesis h to degree r, then an agent whose total evidence is represented by e is justified in believing h to degree r (1950, p. 211)
 > 
 ![Figure-2-3](Figure-2-3.png)
 
-The triangle used most often by Bayesians relates a function from some set to the reals, **a philosophical notion of “probability,”** and normative requirements on an agent’s degrees of belief.
+The triangle used most often by Bayesians relates a function from some set to the reals, **a philosophical notion of “probability,”** and normative requirements on an agent's degrees of belief.
 
 ![Figure-2-4](Figure-2-4.png)
 
@@ -194,7 +201,7 @@ If $M$ is a proper expansion of $M^-$ we will call model $M^-$ a **proper reduct
 
 **Proper Expansion Principle (PEP)**: If model $M$ is a proper expansion of its context-insensitive reduction $M^-$, the analogue of any verdict of $M^-$ is a verdict of $M$.
 
-Sleeping In: After a long, stormy night translating Slavic poetry, Olga finally passes out from exhaustion. She awakens to find that her clock reset at some point during the night and is now blinking“6am. ”She goes back to sleep, and when she awakens again the clock reads“3pm. ”On her second awakening, how should Olga’s degree of belief that it is now afternoon relate to the degrees of belief she assigned on her first awakening
+Sleeping In: After a long, stormy night translating Slavic poetry, Olga finally passes out from exhaustion. She awakens to find that her clock reset at some point during the night and is now blinking“6am. ”She goes back to sleep, and when she awakens again the clock reads“3pm. ”On her second awakening, how should Olga's degree of belief that it is now afternoon relate to the degrees of belief she assigned on her first awakening
 
 ![Table-8-1](./Table-8-1.png)
 
@@ -243,10 +250,10 @@ $$P_2(h) = P_0(h)$$
 SUM: 
 $$P_0(h) > P_1(h)$$
 
-using CLF’s systematic constraints; neither the Principal Principle nor any indifference principle was required. This is sufficient to refute the “halfer” position on the Sleeping Beauty Problem.
+using CLF's systematic constraints; neither the Principal Principle nor any indifference principle was required. This is sufficient to refute the “halfer” position on the Sleeping Beauty Problem.
 
 Objection:
-> Nick Bostrom (2007): Between t1 and t2 Beauty becomes certain not only of the claim “Today is Monday, ” but also of the claim “I have been told today that today is Monday. ” Bostrom argues that Beauty’s Monday night degree of belief in heads is required to equal her Monday morning degree of belief in heads conditional on both these claims, and there is no reason to think that this conditional degree of belief should be greater than Beauty’s unconditional Monday morning degree of belief in heads. So we cannot rely on conclusion that P2(h) > P1(h).
+> Nick Bostrom (2007): Between t1 and t2 Beauty becomes certain not only of the claim “Today is Monday, ” but also of the claim “I have been told today that today is Monday. ” Bostrom argues that Beauty's Monday night degree of belief in heads is required to equal her Monday morning degree of belief in heads conditional on both these claims, and there is no reason to think that this conditional degree of belief should be greater than Beauty's unconditional Monday morning degree of belief in heads. So we cannot rely on conclusion that P2(h) > P1(h).
 
 Answer:
 > 类似于 Table-8-4，By (PEP)可以证明复合命题不影响结论。
@@ -261,26 +268,26 @@ Answer:
 
 the **lack of a context-insensitive truth-value equivalent for the central context-sensitive claim** in the Sleeping Beauty Problem is what kept the philosophical community from solving the problem immediately.
 - 重点是缺少非文本敏感的等价对应，而非记忆缺失这一设定本身。
-- Beauty has a well-understood degree of belief distribution on Sunday night - why couldn’t we just conditionalize that on what she learns between Sunday and Monday to determine her Monday morning degree of belief in heads?
+- Beauty has a well-understood degree of belief distribution on Sunday night - why couldn't we just conditionalize that on what she learns between Sunday and Monday to determine her Monday morning degree of belief in heads?
   - Beauty both gains and loses certainty in context-sensitive claims between Sunday and Monday
 - CLF: 
   - (x) directly modeling the transition from Sunday night to Monday morning
     - ![Table-9-6](Table-9-6.png)
-    - (GC) will not give us any diachronic verdicts for this model, and it will be incapable of deriving Beauty’s Monday morning degrees of belief from her Sunday-night distribution.
+    - (GC) will not give us any diachronic verdicts for this model, and it will be incapable of deriving Beauty's Monday morning degrees of belief from her Sunday-night distribution.
     - move to a proper reduction of model S01?
       - Beauty lacks a context-insensitive expression at t1 that she is certain uniquely picks out the denotation of “today”. 
-  - (v) first compared Beauty’s Monday morning degrees of belief to those required on Monday night, then compared the latter to her Sunday doxastic attitudes.
+  - (v) first compared Beauty's Monday morning degrees of belief to those required on Monday night, then compared the latter to her Sunday doxastic attitudes.
     -  S12: “today” does not change its denotation between those two times, not context-sensitive. use (GC): rationality requires Beauty to be more confident of heads on Monday night than she is on Monday morning.
     -  S02“Today”is context-sensitive relative to those two times, but at each of those times Beauty has a context-insensitive uniquely denoting expression for“today. ” using (PEP)
 
 添加了第三个时间t2和不添加情况下两种实验对t1的信念有影响吗？
-> Our assumption has been that just by letting Beauty know that she is shortly to be told what day it is, the experimenters have not altered her rationally-required Monday morning degree of belief in heads. Because CLF cannot yield substantive models of Beauty’s Monday morning degrees of belief absent an addition to the story, I know of no way to formally prove that the addition makes no difference. But the assumption seems highly plausible in this case, and I have never seen it challenged
+> Our assumption has been that just by letting Beauty know that she is shortly to be told what day it is, the experimenters have not altered her rationally-required Monday morning degree of belief in heads. Because CLF cannot yield substantive models of Beauty's Monday morning degrees of belief absent an addition to the story, I know of no way to formally prove that the addition makes no difference. But the assumption seems highly plausible in this case, and I have never seen it challenged
 
-Add a different feature to the original Sleeping Beauty Problem: The trick will be to keep our added feature independent of the degrees of belief we’re after, so that the addition doesn’t alter the requirements of ideal rationality on Beauty’s unconditional Monday morning degree of belief in heads.
+Add a different feature to the original Sleeping Beauty Problem: The trick will be to keep our added feature independent of the degrees of belief we're after, so that the addition doesn't alter the requirements of ideal rationality on Beauty's unconditional Monday morning degree of belief in heads.
 
 ### 9.3 Technicolor Beauty 
 
-> Everything is exactly as in the original Sleeping Beauty Problem, with one addition: Beauty has a friend on the experimental team, and before she falls asleep Sunday night he agrees to do her a favor. While the other experimenters flip their fateful coin, Beauty’s friend will go into another room and roll a fair die. (The outcome of the die roll is independent of the outcome of the coin flip. ) If the die roll comes out odd, Beauty’s friend will place a piece of red paper where Beauty is sure to see it when she awakens Monday morning, then replace it Tuesday morning with a blue paper she is sure to see if she awakens on Tuesday. If the die roll comes out even, the process will be the same, but Beauty will see the blue paper on Monday and the red paper if she awakens on Tuesday
+> Everything is exactly as in the original Sleeping Beauty Problem, with one addition: Beauty has a friend on the experimental team, and before she falls asleep Sunday night he agrees to do her a favor. While the other experimenters flip their fateful coin, Beauty's friend will go into another room and roll a fair die. (The outcome of the die roll is independent of the outcome of the coin flip. ) If the die roll comes out odd, Beauty's friend will place a piece of red paper where Beauty is sure to see it when she awakens Monday morning, then replace it Tuesday morning with a blue paper she is sure to see if she awakens on Tuesday. If the die roll comes out even, the process will be the same, but Beauty will see the blue paper on Monday and the red paper if she awakens on Tuesday
 
 ![Table-9-7](./Table-9-7.png)
 
@@ -294,7 +301,7 @@ $$P_1^- (h | \langle C_0 - C_1\rangle) = P_0^-(h | \langle C_1 - C_0\rangle)$$
 
 $$P_1^- (h | T) = P_0^-(h | ar \wedge (h \rightarrow mr) )$$
 
-$TB^-$ is $TB$'s context-insensitive reduction. $TB$ is a proper expansion of $TB^-$: $P_0(s \equiv T) = 1, P_1(s \equiv F) = 1, P_0(m \equiv F) = 1, P_2(m \equiv mr) = 1$ 
+$TB^-$ is $TB$'s context-insensitive reduction. $TB$ is a proper expansion of $TB^-$: $P_0(s \equiv T) = 1, P_1(s \equiv F) = 1, P_0(m \equiv F) = 1, P_1(m \equiv mr) = 1$ 
 
 by (PEP):
 $$P_1 (h | T) = P_0(h | ar \wedge (h \rightarrow mr) ) = P_0(h | ar)$$
@@ -307,13 +314,13 @@ $$P_1(h) = \frac{P_0(h \wedge ar)}{P_0(ar)} = \frac{P_0(h \wedge ar)}{P_0(h \wed
 
 $$P_1 (h) = \frac{P_0(mr | h)\cdot P_0(h)}{P_0(mr | h)\cdot P_0(h) + 1 - P_0(h)}$$
 
-> expresses Beauty’s Monday morning degree of belief in heads in terms of two values: her Sunday night degree of belief that the coin will come up heads, and her Sunday night degree of belief that the die roll will come out odd conditional on the coin’s coming up heads.
+> expresses Beauty's Monday morning degree of belief in heads in terms of two values: her Sunday night degree of belief that the coin will come up heads, and her Sunday night degree of belief that the die roll will come out odd conditional on the coin's coming up heads.
 
 Principal Principle yields $P_0(h)=1/2$ and $P_0(mr|h)=1/2$. If we add these as extrasystematic constraints on model $TB$:
 $$P_1(h)=\frac{1}{3}$$
 
 objection:
-> Beauty’s required t1 degree of belief in heads in Technicolor Beauty does not match her required t1 degree of belief in heads in the Sleeping Beauty Problem.
+> Beauty's required t1 degree of belief in heads in Technicolor Beauty does not match her required t1 degree of belief in heads in the Sleeping Beauty Problem.
 
 **answer: four-step argument**
 
@@ -337,16 +344,89 @@ The intuitive idea is that if an agent has an experience in which she gains cert
 **Relevance-Limiting Thesis**: 
 > If an agent receives(or loses) only centered evidence between two times, her doxastic evolution violates the requirements of ideal rationality if the degree of belief it assigns to any uncentered world changes between those times.
 
-Lewis cannot maintain the Relevance-Limiting Thesis consistently：between those two times she gains only centered evidence—nothing that she learns eliminates any uncentered worlds for her. it’s no surprise that most halfers
+Lewis cannot maintain the Relevance-Limiting Thesis consistently：between those two times she gains only centered evidence—nothing that she learns eliminates any uncentered worlds for her. it's no surprise that most halfers
 about Sleeping Beauty have now **moved to a double-halfing position**.
 
 Double-halfing conflicts with the results of applying a **powerful intuition** to the Sleeping Beauty Problem. 
->  On Monday morning Beauty considers two possibilities: it’s either Monday or it’s not. If it’s not Monday, there’s no way the coin came up heads(because whatever day it is, she’s awake on that day, and if the coin came up heads that can’t happen on Tuesday). So when Beauty learns that it’s Monday, eliminating the possibility that it’s not Monday, that should increase her degree of belief in heads. This is the result CLF yields, and it is in direct conflict with the Relevance-Limiting Thesis.
+>  On Monday morning Beauty considers two possibilities: it's either Monday or it's not. If it's not Monday, there's no way the coin came up heads(because whatever day it is, she's awake on that day, and if the coin came up heads that can't happen on Tuesday). So when Beauty learns that it's Monday, eliminating the possibility that it's not Monday, that should increase her degree of belief in heads. This is the result CLF yields, and it is in direct conflict with the Relevance-Limiting Thesis.
 
 **difference** between the HTM and  CLF:
 - HTM: divides claims into two kinds (centered and uncentered)
 - CLF: divides claims into epistemically context-sensitive versus epistemically context-insensitive
 
-> Between t1 and t2 in the Sleeping Beauty Problem “Today is Monday” may be a centered claim, but it is not epistemically context-sensitive. Beauty is certain that“today”doesn’t change its denotation between t1and t2, and she doesn’t lose certainty in any“today”claims. So CLF allows Beauty to update by conditionalizing on“Today is Monday”just as she would on any normal, well-behaved uncentered claim.
+> Between t1 and t2 in the Sleeping Beauty Problem “Today is Monday” may be a centered claim, but it is not epistemically context-sensitive. Beauty is certain that“today”doesn't change its denotation between t1and t2, and she doesn't lose certainty in any“today”claims. So CLF allows Beauty to update by conditionalizing on“Today is Monday”just as she would on any normal, well-behaved uncentered claim.
 
 in Technicolor Beauty HTM assigns $P_{0.5}(h) = \frac{1}{2}$ and $P_1(h) = \frac{1}{3}$
+
+
+## 11. Indifference principles and quantum mechanics
+
+[Technicolor Beauty](). By adding colored papers to the story instead of a Monday night interaction, we showed using just CLF and the Principal Principle that ideal rationality requires Beauty to set her Monday morning degree of belief in heads at 1/3—no indifference principles were required. But isn't that suspicious? 
+
+We will show that in many stories the verdicts of [Elga's indifference principle]() among subjectively in distinguishable states can be obtained through an application of the [Principal Principle and some derivations in CLF]().
+
+### 11.1 The Indifference Principle
+
+
+
+Elga (2004) "highly restricted principle of indifference" 
+: An agent should distribute her degrees of belief equally among centered worlds indexed to the same [uncentered]() world that are [subjectively indistinguishable]() for the agents at
+their centers.
+
+- **Duplication**: After Al goes to sleep researchers create a duplicate of him in a duplicate environment. Al is certain in advance this will happen. 
+- **Coma**: Same as Toss & Duplication: if coin comes up heads, they awaken only Al. If it comes up tails, they awaken only Dup.
+  - Al's required degree of heads is 0.10
+  - elaga argument: same credence before start
+    - problem: centered evidence irrelevant like HTM
+- **Toss & Duplication**: 10% chance of landing heads. The outcome of the coin toss [affects nothing]() in the experimental protocol
+  - Al's required degree of belief in heads conditional on “I'm Al” is 0.10
+  - Al's required degree of belief in [heads]() conditional on the disjunction of conjunctions “the coin came up [heads]() and I'm Al or ~~the coin came up tails and I'm Dup~~” is 0.10. 
+
+#### 11.1.2 CLF and Duplication
+
+- Technicolor Al: The same as Duplication, except Al asks a friend to flip a fair coin without
+revealing the result. If the coin comes up [heads](), the friend will show [Al a red piece]() of paper
+after the duplication and [show Dup a blue]() piece of paper. If the coin comes up [tails](), the colors
+are [reversed]().
+
+**The worry is**: Couldn’t we do this with anything? Couldn’t we take any agent with
+any degree of belief in any claim, correlate the claim with some [pieces of paper]() whose
+color was determined by a fair coin flip, and force the agent (on pain of irrationality)
+to assign that claim degree of belief 1/2?
+
+- Speedy: Jane thinks Speedy the horse has a 70% chance of winning today's race. Jane's friend will
+flip a fair coin whose outcome Jane views as probabilistically independent of the horse race. If
+the coin comes up heads, Jane's friend will show her a red paper if Speedy wins; on tails, red
+goes with a Speedy loss.
+
+#### 11.1.4 Weatherson’s objections
+
+we have argued that he should be equally confident that he’s Al
+or Dup; it’s irrelevant to our argument whether Al’s story is described using notions
+of indistinguishability or not
+
+[infinitistic]() stories
+fall outside the domain of applicability of CLF on its standard interpretation, and
+argued that this should not lead us to question verdicts of CLF models for stories
+(like Duplication) that fall within the framework’s domain.
+
+### 11.2 Fission and cloning
+
+[Fission]() 裂变：
+> suppose the right hemisphere of his brain was transplanted into one body and the left was transplanted into another, in such a way that both resulting
+individuals acted like Al and seemed to retain all his memories.
+
+- if [Uniqueness]() is true: the model's verdicts represent genuine requirements of ideal rationality whether or not those two individuals are numerically identical.
+- suppose Uniqueness is false: why those [successors]() should be required to honor Al's doxastic commitments.
+
+### 11.3 Quantum mechanics
+
+(√0.7)|up + (√0.3)|down: call the time before the experiment is run t0 and the time after the experiment is run but [before]() Alice examines her measurement device t1
+
+- The classical (“Copenhagen”) interpretation of quantum mechanics: [superposition of being spin-up and being spin-down](). This superposed state is distinct from the state of being up and the state of being down. When the measurement is performed, the electron instantaneously “[collapses]()” into either the up state or the down state. This collapse is genuinely indeterministic, with an objective chance that the electron will collapse into the up state of 0.7. 
+  - 在t0给根据Principal Principle 给出确信度 0.7，在t1没有增加相关证据所以保持0.7.
+
+- non-classical interpretations non-classical interpretations: when measurement occurs the universe splits [into two branches](), with each term of the expression in Quantum describing one branch. 
+  - Dlice down world
+  - Ulice up world
+  - Each of those Alices is required to assign a t1 degree of belief of 0.7 that she is about to see a measurement apparatus reading “U;” of course, that claim is true for Ulice but not for Dlice.
