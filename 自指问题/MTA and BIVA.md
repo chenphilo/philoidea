@@ -1,6 +1,3 @@
-
-
-
 ### Sher
 
 对于[替换论证](a "PERM")，[Sher](a "2015, The model-theoretic argument: from
