@@ -119,18 +119,18 @@ proposition logic 命题逻辑 命題論理
       $\frac{
       A \lor B \quad
       \begin{array}{c}
-        [A]^1 \\ 
-        \vdots \\ 
+        [A]^1 \\
+        \vdots \\
         C
       \end{array} \quad
       \begin{array}{c}
-        [B]^2 \\ 
-        \vdots \\ 
+        [B]^2 \\
+        \vdots \\
         C
       \end{array}
       }{
       C
-      } \lor E^{1,2}$
+      }\lor E^{1,2}$
 
       $\frac{
       A \rightarrow B \quad A
@@ -142,7 +142,7 @@ proposition logic 命题逻辑 命題論理
   
       $\frac{
       \begin{array}{c}
-          [\neg A]^1 \\ 
+          [\neg A]^1 \\
           \vdots \\
           \bot
       \end{array}
@@ -173,7 +173,7 @@ proposition logic 命题逻辑 命題論理
 
       $\frac{
       \begin{array}{c}
-          [A]^1 \\ 
+          [A]^1 \\
           \vdots \\
           B
       \end{array}
