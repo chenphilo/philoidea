@@ -98,91 +98,90 @@ proposition logic 命题逻辑 命題論理
     - MP: $\frac{\phi, \phi\rightarrow\psi}{\psi}$
 - 自然演繹体系（証明論論理）
     - Gerhard Gentzen 根岑 1934-1935  
-    - Elimination Rule 消除规则 除去規則
+    - Elimination Rule 消除规则 除去規則 
 
-        $\frac{
-        A \quad \neg A
-        }{
-        \bot
-        }
-        \neg E, 
-        \frac{
-        A \land B
-        }{
-        A
-        }
-        \land E_1
-        \quad
-        \frac{
-        A \land B
-        }{
-        B
-        }
-        \land E_2, 
-        \frac{
-        A \lor B \quad
-        \begin{array}{c}
-            [A]^1 \\ 
-            \vdots \\
-            C
-        \end{array}
-        \quad
-        \begin{array}{c}
-            [B]^2 \\ 
-            \vdots \\
-            C
-        \end{array}
-        }{
+      $\frac{
+      A \quad \neg A
+      }{
+      \bot
+      } \neg E$
+
+      $\frac{
+      A \land B
+      }{
+      A
+      } \land E_1 \quad \frac{
+      A \land B
+      }{
+      B
+      } \land E_2$
+
+      $\frac{
+      A \lor B \quad
+      \begin{array}{c}
+        [A]^1 \\ 
+        \vdots \\ 
         C
-        }
-        \lor E^{1,2}, 
-        \frac{
-        A \rightarrow B \quad A
-        }{
-        B
-        }
-        \rightarrow E$
+      \end{array} \quad
+      \begin{array}{c}
+        [B]^2 \\ 
+        \vdots \\ 
+        C
+      \end{array}
+      }{
+      C
+      } \lor E^{1,2}$
+
+      $\frac{
+      A \rightarrow B \quad A
+      }{
+      B
+      } \rightarrow E$  
+
     - Introduction Rule 引入规则 導入規則  
   
-        $\frac{
-        \begin{array}{c}
-            [\neg A]^1 \\ 
-            \vdots \\
-            \bot
-        \end{array}
-        }{
-        A
-        }
-        \neg I^1, 
-        \frac{
-        A \quad B
-        }{
-        A \land B
-        }
-        \land I, 
-        \frac{
-        A
-        }{
-        A \lor B
-        }
-        \lor I_1
-        \quad
-        \frac{
-        B
-        }{
-        A \lor B
-        }
-        \lor I_2, 
-        \frac{
-        \begin{array}{c}
-            [A]^1 \\ 
-            \vdots \\
-            B
-        \end{array}
-        }{
-        A \rightarrow B
-        }
-        \rightarrow I^1$  
+      $\frac{
+      \begin{array}{c}
+          [\neg A]^1 \\ 
+          \vdots \\
+          \bot
+      \end{array}
+      }{
+      A
+      }
+      \neg I^1$  
+        
+      $\frac{
+      A \quad B
+      }{
+      A \land B
+      }
+      \land I, 
+      \frac{
+      A
+      }{
+      A \lor B
+      }
+      \lor I_1
+      \quad 
+      \frac{
+      B
+      }{
+      A \lor B
+      }
+      \lor I_2$  
+
+      $\frac{
+      \begin{array}{c}
+          [A]^1 \\ 
+          \vdots \\
+          B
+      \end{array}
+      }{
+      A \rightarrow B
+      }
+      \rightarrow I^1$  
+
     - Reductio ad Absurdum 归谬法 反证法
 
         $\frac{
@@ -208,7 +207,7 @@ first-order logic 一阶逻辑 一階論理
     - MP: $\frac{\phi, \phi\rightarrow\psi}{\psi}$
 - 自然演繹
   - Elimination Rule 消除规则 除去規則
-    - 同命題规则, 
+    - 同命題规则,  
         $\frac{
         \forall x P(x)
         }{
@@ -225,9 +224,10 @@ first-order logic 一阶逻辑 一階論理
         }{
         C
         }
-        \exists E^1$
+        \exists E^1$  
+
   - Introduction Rule 引入规则 導入規則  
-    - 同命題规则, 
+    - 同命題规则,  
         $\frac{
         \begin{array}{c}
             P(x) \\ 
@@ -242,7 +242,7 @@ first-order logic 一阶逻辑 一階論理
         }{
         \exists x P(x)
         }
-        \exists I$
+        \exists I$  
 
 second-order logic 二阶逻辑 二階論理  
 axiom 公理 公理  
