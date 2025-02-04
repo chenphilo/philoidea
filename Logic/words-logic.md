@@ -66,24 +66,24 @@ logic 逻辑 論理
       - $(\varphi_1, \varphi_2... \varphi_n)$
   - 証明論理論と意味論理論の関係:
     - 規則関係
-      - 可允规则$R$: for any $(\Sigma,\varphi)\in R: \vdash\Sigma \Rightarrow \vdash\varphi$  
-      - 导出规则$R$: for any $(\Sigma,\varphi)\in R: \Sigma\vdash\varphi$  
-      - 有效规则$R$: for any $(\Sigma,\varphi)\in R: \vDash\Sigma \Rightarrow \vDash\varphi$
-      - 保真规则$R$: for any $(\Sigma,\varphi)\in R: \Sigma\vDash\varphi$    
-    - 健全性:$\vdash\varphi\Rightarrow\vDash\varphi$
-      - 強健全性:$\vDash\subset\vdash$
+      - 可允规则 $R$ : for any $(\Sigma,\varphi)\in R: \vdash\Sigma \Rightarrow \vdash\varphi$  
+      - 导出规则 $R$ : for any $(\Sigma,\varphi)\in R: \Sigma\vdash\varphi$  
+      - 有效规则 $R$ : for any $(\Sigma,\varphi)\in R: \vDash\Sigma \Rightarrow \vDash\varphi$
+      - 保真规则 $R$ : for any $(\Sigma,\varphi)\in R: \Sigma\vDash\varphi$    
+    - 健全性: $\vdash\varphi\Rightarrow\vDash\varphi$
+      - 強健全性: $\vDash\subset\vdash$
       - <details>
         ![Proof Diagram](pic/soundness.png)
         </details>
 
-    - 完全性:$\vDash\varphi\Rightarrow\vdash\varphi$
-      - 強完全性:$\vdash\subset\vDash$
+    - 完全性: $\vDash\varphi\Rightarrow\vdash\varphi$
+      - 強完全性: $\vdash\subset\vDash$
       - 証明   
 
 
 -------
 proposition logic 命题逻辑 命題論理
-- 意味論体系（モデル論理）$\mathbf{PC} = (V, \vDash)$
+- 意味論体系（モデル論理） $\mathbf{PC} = (V, \vDash)$
   - Domain 论域 論域
   - Assignment 赋值 割当
   - Truth conditions 真值条件 真理条件
@@ -98,7 +98,8 @@ proposition logic 命题逻辑 命題論理
     - MP: $\frac{\phi, \phi\rightarrow\psi}{\psi}$
 - 自然演繹体系（証明論論理）
     - Gerhard Gentzen 根岑 1934-1935  
-    - Elimination Rule 消除规则 除去規則  
+    - Elimination Rule 消除规则 除去規則
+
         $\frac{
         A \quad \neg A
         }{
@@ -142,6 +143,7 @@ proposition logic 命题逻辑 命題論理
         }
         \rightarrow E$
     - Introduction Rule 引入规则 導入規則  
+  
         $\frac{
         \begin{array}{c}
             [\neg A]^1 \\ 
@@ -181,7 +183,8 @@ proposition logic 命题逻辑 命題論理
         A \rightarrow B
         }
         \rightarrow I^1$  
-    - Reductio ad Absurdum 归谬法 反证法  
+    - Reductio ad Absurdum 归谬法 反证法
+
         $\frac{
         \begin{array}{c}
             [\neg A]^1 \\ 
