@@ -1,6 +1,7 @@
 proposition 命题 命題  
 symbol 符号 記号        
 term 项 項  
+n-ary function n元函数 n 項関数
 constant 常元 定数（定項）
 -   tautology (⊤) 永真式 恒真式  
     contradiction (⊥) 永假式 矛盾式 
@@ -40,54 +41,117 @@ formula 公式 論理式
     $d(\varphi\rightarrow\psi) := d(\varphi) + d(\psi)+ 1$   
     $d(\forall\varphi) := d(\varphi) + 1$ 
 
-证明长度
-  - <details>
-    ![alt text](prooflength.png)
-    </details>
-
 logic 逻辑 論理
   - a reason: $(\Gamma, \varphi)\in {\mathcal{P}(\mathcal{L})}\times\mathcal{L}$
-  - logic (用了证明论逻辑的常用符号，但这里代表一般性逻辑):  $\mathbf{L}=(\mathcal{L}, \vdash)$, where $\vdash \subseteq \mathcal{P}(\mathcal{L})\times\mathcal{L}$
-  - 性質:  
-      Reflexive 自反性 反射的 (はんしゃてき): $\varphi\vdash\varphi$  
-      Transitive 传递性 推移的 (すいいてき): If $\Gamma\vdash\Sigma$ and $\Sigma\vdash\varphi$, then $\Gamma\vdash\varphi$  
-      Monotonicity 单调性 単調性 (たんちょうせい): If $\Gamma\vdash\varphi$ and $\Gamma\subseteq\Sigma$, then $\Sigma\vdash\varphi$  
-      Compact 紧致的 コンパクト: If $\Gamma\vdash\varphi$, then exist finite set $\Phi\vdash\varphi$  
-      Formal/structural 形式的 形式的: If $\Sigma\vdash\varphi$, then $\Sigma^\sigma\vdash\varphi\sigma$  
-      Extension 扩张 拡張: $\mathbf{L'}$ is extended logic of $\mathbf{L}$ iff $\vdash \subseteq \vdash'$  
+  - 論理 :  $\mathbf{L}=(\mathcal{L}, \vdash)$, where $\vdash \subseteq \mathcal{P}(\mathcal{L})\times\mathcal{L}$ 
+    - 用了证明论逻辑的常用符号，但这里代表一般性逻辑
+  - 性質（論理と言える性質）:  
+      - Reflexive 自反性 反射的 (はんしゃてき): $\varphi\vdash\varphi$  
+      - Transitive 传递性 推移的 (すいいてき): If $\Gamma\vdash\Sigma$ and $\Sigma\vdash\varphi$, then $\Gamma\vdash\varphi$  
+      - Monotonicity 单调性 単調性 (たんちょうせい): If $\Gamma\vdash\varphi$ and $\Gamma\subseteq\Sigma$, then $\Sigma\vdash\varphi$  
+      - Compact 紧致的 コンパクト: If $\Gamma\vdash\varphi$, then exist finite set $\Phi\vdash\varphi$  
+      - Formal/structural 形式的 形式的: If $\Sigma\vdash\varphi$, then $\Sigma^\sigma\vdash\varphi\sigma$  
+  - 論理間の関係
+    - Extension 扩张 拡張: $\mathbf{L'}$ is extended logic of $\mathbf{L}$ iff $\vdash \subseteq \vdash'$  
+-----
+
+比較：$\mathbf{L}=(\mathcal{L}, \vdash)$, $S = (M, \Vdash)$, $S = (Ax, R^p, R^d)$，後の2つはどうやって $\mathbf{L}$ を作るかと探ることである。すなわち、どうやって $\vdash$ を定義することで、意味論含意か、構文的含意か。
+
+-----
   - 意味論理論: 
-    - 表达力与不变性
-    - 可定义性
-    - 有穷模型性  
-  - 証明論理論:
-    - 性质优良的证明系统
-    - 考不同逻辑之间的关系
-    - 証明方法: induction on the length of the proof.
-      - $(\varphi_1, \varphi_2... \varphi_n)$
-  - 証明論理論と意味論理論の関係:
-    - 規則関係
-      - 可允规则 $R$ : for any $(\Sigma,\varphi)\in R: \vdash\Sigma \Rightarrow \vdash\varphi$  
-      - 导出规则 $R$ : for any $(\Sigma,\varphi)\in R: \Sigma\vdash\varphi$  
+    - 意味論体系 $S = (M, \Vdash)$
+      - モデル $M\neq \empty$、満足関係 $\Vdash\subseteq M\times\mathcal{L}$
+      - satisfiability 可满足性 充足可能性： $\Sigma$ is satisfied in S iff if exist $w\in M, w\Vdash \Sigma$
+      - semantic consequence 语义后承 意味論的含意: $\Sigma\vDash\varphi$ iff for any $w\in M$, if $w\Vdash \Sigma$ then $w\Vdash \varphi$
+      - valid 有效的 妥当的: $\Sigma = \empty$, $\Vdash \varphi$
+    - 規則  
       - 有效规则 $R$ : for any $(\Sigma,\varphi)\in R: \vDash\Sigma \Rightarrow \vDash\varphi$
-      - 保真规则 $R$ : for any $(\Sigma,\varphi)\in R: \Sigma\vDash\varphi$    
+      - 保真规则 $R$ : for any $(\Sigma,\varphi)\in R: \Sigma\vDash\varphi$ 
+    - 表达力与不变性 可定义性 有穷模型性
+  - 証明論理論:
+    - 公理体系 $S = (Ax, R^p, R^d)$
+      - 公理集合、証明規則、推理規則（前提集を用いる）
+      - <details>
+          <summary>形式推演 形式演繹</summary>
+          <img src="pic/形式推演.png" alt="形式推演">
+        </details>
+      - 内定理 $\vdash \varphi$
+      - syntactic consequence 句法后承 構文的含意 $\Sigma\vdash\varphi$ iff exist sequence $(\varphi_1, \varphi_2, ..., \varphi_n, m)$
+        - 用 包含两种规则的 **形式推演** 定义 **句法后承**，可允规则和导出规则则是用句法后承定义的。可证 証明規則是可允规则，推理規則是导出规则。
+      - 规則：
+        - 可允规则 $R$ : for any $(\Sigma,\varphi)\in R: \vdash\Sigma \Rightarrow \vdash\varphi$  
+        - 导出规则 $R$ : for any $(\Sigma,\varphi)\in R: \Sigma\vdash\varphi$  
+      - 公理体系間の関係:
+        - $S'$ is Extension of $S$ : $\vdash_S\subseteq\vdash_{S'}$
+        - $S'$ is axiom Extension of $S$ : $\vdash_S\subseteq\vdash_{S'}$ and both share the same rules
+
+  - 証明論理論と意味論理論の関係:
     - 健全性: $\vdash\varphi\Rightarrow\vDash\varphi$
       - 強健全性: $\vDash\subset\vdash$
       - <details>
-        ![Proof Diagram](pic/soundness.png)
+          <summary>Proof soundness</summary>
+          <img src="pic/soundness.png" alt="Proof Diagram">
         </details>
 
     - 完全性: $\vDash\varphi\Rightarrow\vdash\varphi$
       - 強完全性: $\vdash\subset\vDash$
-      - 証明   
-
+      - <details>
+          <summary>Proof completeness IDEA</summary>
+          <img src="pic/proofcompleteness1.png" alt="Proof Diagram">  
+          <img src="pic/proofcompleteness2.png" alt="Proof Diagram">
+        </details>
+      - $\varphi$-Saturated $\varphi$-饱和的 $\varphi$-飽和した
+        - $\Sigma$ is Saturated set in $\mathbf{L}$: exist $\varphi$ that $\Sigma$ is $\varphi$-Saturated
+      - $\mathbf{L}$-consistent 一致的 無矛盾: exist $\varphi, \Sigma\nvdash\varphi$
+        - Maximally consistent set 極大無矛盾集合: no $\Sigma', \Sigma\subset\Sigma'$
+      - theory 理論: $\Sigma$ is theory of $\mathbf{L}$ iff $\Sigma\vdash\varphi$ then $\varphi\in\Sigma$
+      - <details>
+          <summary>lindenbaumlemma</summary>
+          <img src="pic/lindenbaumlemma.png" alt="Proof Diagram">
+        </details>
+      - `ANOTER IDEA`: prove $\nvdash\varphi\Rightarrow\nvdash\varphi\Leftrightarrow t_0 = (\empty,\{\varphi\})$ is realizable 
+      - Semantic Tableau: $t=(\Sigma, \Delta), \Sigma, \Delta\subseteq \mathcal{L}$ 
+        - <details>
+            <summary>tableau</summary>
+            <img src="pic/tableau.png" alt="tableau">
+          </details>
+        - <details>
+            <summary>realizable</summary>
+            <img src="pic/realizable.png" alt="realizable">
+          </details>
+        - $t=(\Sigma, \Delta)$ is consistent in $\mathcal{L}$:  $\Sigma\vdash\varphi_1\vee\dots\vee\varphi_m$ and $\varphi_1\dots\varphi_m\notin\Delta$ that is $\Sigma\nvdash\bot$
+      - <details>
+          <summary>tableauproof</summary>
+          <img src="pic/tableauproof.png" alt="tableauproof">
+        </details>
+      - prove $t_{n}$ is consistent.
+      - prove $t_{n}$ is saturated and disjoint.
+-------
+以下具体的に
 
 -------
-proposition logic 命题逻辑 命題論理
-- 意味論体系（モデル論理） $\mathbf{PC} = (V, \vDash)$
-  - Domain 论域 論域
-  - Assignment 赋值 割当
-  - Truth conditions 真值条件 真理条件
-    - Truth table 真值表 真理値表
+proposition logic (Propositional Calculus) 命题逻辑 命題論理
+- 意味論体系（モデル論理） $\mathbf{PC} = (V, \vDash)$ 
+  - Assignment 赋值 割当 
+    - $V: PV = \{p_1, p_2,...\} \rightarrow \{0, 1\}$
+  - Satisfy 满足 満たす
+    - $V\Vdash p$ iff $V(p) = 1$ 
+    - $V\Vdash \neg\varphi$ iff $V(\varphi) = 1$
+    - ...
+  - Valuation function 赋值函数 割り当て関数
+    - $\llbracket\cdot\rrbracket^{V}: \mathcal{L}\rightarrow\{0,1\}$
+    - $\llbracket p\rrbracket^{V} = V(p)$
+    - $\llbracket \varphi \land \psi \rrbracket^V := f_{\land}(\llbracket \varphi \rrbracket^V, \llbracket \psi \rrbracket^V)$
+    - $\llbracket \varphi \land \psi \rrbracket^V := f_{\land}(\llbracket \varphi \rrbracket^V, \llbracket \psi \rrbracket^V)$
+    - $\cdots$
+    - $f$ can be given by Truth table 真值表 真理値表
+  - Functional Completeness 函项完全性 関数完全性
+    - 真值函项的连接词 c: $\quad \llbracket c_f (\varphi_1, \dots, \varphi_n) \rrbracket^V = f(\llbracket \varphi_1 \rrbracket^V, \dots, \llbracket \varphi_n \rrbracket^V)$
+    - 反过来 $\varphi$ define n-ary function: $f_{\varphi}(x_1, \dots, x_n) := \llbracket \varphi \rrbracket^V$
+    - <details>
+        <summary>functioncomplete</summary>
+        <img src="pic/functioncomplete.png" alt="Proof Diagram">
+      </details>
 - 公理体系（証明論論理）
   - 公理    
     - PC1: $\quad p \to (q \to p)$   
@@ -193,10 +257,60 @@ proposition logic 命题逻辑 命題論理
         }{
         A
         }
-        RA^1$  
+        RA^1$
 
-first-order logic 一阶逻辑 一階論理
-- 公理体系
+- <details>
+      <summary>classical logic</summary>
+      <img src="pic/classical.png" alt="classical">
+  </details>
+- 健全性と完全性
+  - <details>
+      <summary>truth lemma</summary>
+      <img src="pic/truthlemma.png" alt="truthlemma">
+    </details>
+first-order logic (Quantificational Calculus) 一阶逻辑 一階論理 
+- language 言語
+  - 基础词 Variable; constant; Function; Predicate; connective; quantifier 量化子 ${\forall}$; $\{=\}$; $\{(,)\}$
+  - 项 $\mathcal{T}(Var,Con,Fun)$
+  - formula 論理式 $\mathcal{L}(Var,Con,Fun,Pre)$
+    - atomic formula: $P(t_1...t_n) | t=t'$
+    - complex formula
+    - Quantificational formula
+    - Bool formula
+  - <details>
+      <summary>Free variable </summary>
+      <img src="pic/Fv.png" alt="Fv">
+    </details>
+  - <details>
+      <summary>substitute</summary>
+      <img src="pic/substitute.png" alt="substitute">
+    </details>
+  - free substitute: $F\varphi^{t}_{x}$
+    - <details>
+      <summary>freesubstitute</summary>
+      <img src="pic/freesubstitute.png" alt="freesubstitute">
+      </details>
+- 意味論体系 $\mathbf{QC} = (M, \vDash)$ 
+  - 模型 $\mathfrak{M}=(D, I)$
+    - Domain 论域 論域
+    - Interpretation 解释 解釈 $I = Con\cup Fun \cup Pre$
+  - Assignment 指派 $g:Variable\rightarrow D$
+    - 指派模型 $(\mathfrak{M}, g)$
+  - 項の解釈
+    - $x\in Var: x^{\mathfrak{M},g} = g(x)$
+    - $c\in Con: c^{\mathfrak{M},g} = c^{\mathfrak{M}}$
+    - $f(t_1\dots t_n)\in Fun: f^{\mathfrak{M}}(t_1^{\mathfrak{M},g}\dots t_n^{\mathfrak{M},g}) = g(x)$
+  - <details>
+        <summary>满足关系</summary>
+        <img src="pic/firstorderlogicsatisfy.png" alt="Proof Diagram">
+    </details>
+  - 语义后承 略
+  - <details>
+        <summary>替换引理 substitutelemma</summary>
+        <img src="pic/substitutelemma.png" alt="Proof Diagram">
+    </details>
+
+- 公理体系 
   - 公理
     - 命題論理公理PC1, PC2, PC3  
     - UD: $\forall x(\phi\rightarrow\psi)\rightarrow (\forall x\phi\rightarrow\forall x\psi)$   
@@ -244,6 +358,23 @@ first-order logic 一阶逻辑 一階論理
         }
         \exists I$  
 
+
+- 健全性
+  - 公理妥当性を証明する
+- 完全性
+  - <details>
+        <summary>canonical model 典范模型</summary>
+        <img src="pic/firstcanonicalmodel.png" alt="canonical">
+    </details>
+    - 原子論理式の解釈は命題論理と同じ
+  - canonical assignment: $\forall x\in Variable, g^\Gamma(x)=[x]_\Gamma$
+  - <details>
+        <summary>全称量词的处理</summary>
+        <img src="pic/dealwithqualitifier.png" alt="dealwithqualitifier">
+    </details>
+
+--------
+  
 second-order logic 二阶逻辑 二階論理  
 axiom 公理 公理  
 theorem 定理 定理  
