@@ -1,6 +1,6 @@
 # Argument pattern
 ## SELF REFERENCE
-
+- lair paradox
 - Rusuall paradox
   - background: naive set theory
   - unrestricted comprehension principle: 
@@ -10,6 +10,7 @@
   - the Russell set: $R = \{x | x\notin x\}$ 
     - then $R\in R \iff R\notin R$, contradiction
 - Gödel's incompleteness theorems
+  - Diagonal lemma
 - turing machine
 - Tarski's undefinability theorem
 
@@ -21,8 +22,12 @@
 
 - Evans's Argument Against Vague Identity
 
+- scientifc REALISM itself is a kind of scientifc hypothesis
 
-## INFINITE REGRESS
+## INFINITE REGRESS/EXTERNAL VIEW/GOD VIEW
+
+- putnam attack this view but is him using it to judge external semantic theory?
+  - twin earth is a external view?
 
 ## OTHERS
 - Moorean argument
