@@ -4,6 +4,7 @@
   - [summary： Certainty-Loss Framework (CLF) vs Bayesians](#summary-certainty-loss-framework-clf-vs-bayesians)
   - [2. Models and norms](#2-models-and-norms)
   - [3. The modeling framework and what models represent](#3-the-modeling-framework-and-what-models-represent)
+    - [3.1 Stories and claims](#31-stories-and-claims)
   - [6. Generalized Conditionalization](#6-generalized-conditionalization)
   - [7. Suppositional consistency](#7-suppositional-consistency)
   - [8. The Proper Expansion Principle](#8-the-proper-expansion-principle)
@@ -97,6 +98,8 @@ Changes in confidence over time are exactly the sort of thing [CLF models]() wer
 - a set of [extrasystematic constraints](系统外约束)
   - 简单来说就是对确定性Certainty的解释，如果确定或能被确定的推出，则 $P_1(x) = 1$
   - 如果非确定，则 $P_1(x) < 1$
+
+### 3.1 Stories and claims
 
 
 ## 6. Generalized Conditionalization
@@ -344,14 +347,20 @@ objection:
 
 add a time on Monday morning in the Technicolor Beauty red-Monday case just after Beauty awakens but just before she sees the red paper: $t=0.5$
 
-step1. $P_1(h) = \frac{1}{3}$ in Technicolor case
+in Technicolor case 用*表示：
 
-step2. $P_{0.5}(h)$ in Technicolor case $= P_1(h)$ in original case
+step1. $P_1(h)^* = \frac{1}{3}$
 
-step3. $P_{0.5}(h|\textup{Today is the red paper day}) = \frac{1}{3}$
+step2. $P_{0.5}(h)^* = P_1(h)$
 
-step3. $P_{0.5}(h) = \frac{1}{3}$
+step3. $P_{0.5}(h|\textup{Today is red paper day})^* = P_1(h)^* = \frac{1}{3}$
 
+step4. red-Monday 和 blue-Monday 两个故事下都有类似的结论，蓝色故事下 有$P_{0.5}(h|\textup{Today is blue paper day})^* = P_{0.5}(h|\textup{Today is not red paper day})^* = P_1(h)^* = \frac{1}{3}$
+
+然后作为外部约束放到红色的故事下：
+> Since this equation represents a requirement of ideal rationality in the red-Monday case, we can add it as an extrasystematic constraint on model TB∗.
+
+则可以推出$P_{0.5}(h)^* = \frac{1}{3}$ 
 ## 10. Alternative updating schemes
 
 Halpern (2005) Meacham (2008) HTM
