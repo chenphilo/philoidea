@@ -3,29 +3,6 @@
 * **教科書**：Tim Maudlin, *Philosophy of Physics: Space and Time* (Princeton University Press, 2012)
 * **授業**：ジミー エイムズ  (Jimmy Aames) 
 * **※は私の説明**
----
-
-※図
-
-```Mermaid
-graph TD
-    Topo["位相構造（Topology）"]
-    Smooth["滑らかな構造（可微分構造）"]
-    Smooth --> spacetimeE["あああ"]
-    Affine["アファイン構造（Affine structure）"]
-    Metric["計量構造（Metric structure）"]
-    Topo -- 滑らかさ --> Smooth
-    Smooth -- 直線概念 --> Affine
-    Smooth -- 等長距離 --> Metric
-    Affine --空間--> Euclid["ユークリッド空間"]
-    Euclid --時間に通して不変--> newtonspace["絶対空間"]
-    Metric --空間--> Euclid
-    Metric --時間--> t["絶対時間"]
-    t --> spacetimeG["時空"]
-    Euclid --> spacetimeG
-    spacetimeG --アファイン変換不変性--> Galileo["ガリレイ時空"]
-    spacetimeE --ローレンツ変換不変性--> Einstein["ミンコフスキー時空"]
-```
 
 ## 00
 
